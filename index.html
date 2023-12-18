@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="mt-5 mb-5">Expense Tracker With Local Storage</h2>
+      <div class="mb-5">
+        <div class="row">
+          <div class="form-group col-md-6 mb-3">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div class="form-group col-md-6 mb-3">
+            <label for="amount">Amount</label>
+            <input
+              type="number"
+              name="amounts"
+              class="form-control"
+              id="amounts"
+              placeholder="Enter Amount"
+            />
+          </div>
+          <div class="form-group col-md-6 mb-3">
+            <label for="discription">Discription</label>
+            <input
+              type="text"
+              name="discription"
+              class="form-control"
+              id="discription"
+              placeholder="Enter Discription"
+            />
+          </div>
+          <div class="form-group col-md-6 mb-3">
+            <label for="category">Category</label>
+            <br />
+            <select name="category" id="category">
+              <option value="food">Food</option>
+              <option value="fuel">FUEL</option>
+              <option value="rent">RENT</option>
+              <option value="grocery">GROCERY</option>
+              <option value="other">OTHER</option>
+            </select>
+          </div>
+          <div class="col-lg-12 mt-5">
+            <button class="btn btn-success" id="Submit" onclick="AddData()">
+              ADD DATA
+            </button>
+            <button class="btn btn-primary" id="Update">
+              UPDATE
+            </button>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-5">
+        <div class="col-12">
+            <table class="table table-bordered" id="crudTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Discription</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
